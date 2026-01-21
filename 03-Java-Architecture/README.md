@@ -245,10 +245,10 @@ JRE provides:
 ### JVM Components
 
 ```
-┌─────────────────────────────────────┐
-│         Java Virtual Machine        │
-├─────────────────────────────────────┤
-│                                     │
+┌────────────────────────────────────┐
+│         Java Virtual Machine       │
+├────────────────────────────────────┤
+│                                    │
 │  ┌────────────────────────────┐    │
 │  │     Class Loader           │    │
 │  │  • Loads .class files      │    │
@@ -256,33 +256,33 @@ JRE provides:
 │  │  • Linking                 │    │
 │  │  • Initialization          │    │
 │  └────────────────────────────┘    │
-│                                     │
+│                                    │
 │  ┌────────────────────────────┐    │
 │  │   Bytecode Verifier        │    │
 │  │  • Verifies .class files   │    │
 │  │  • Security checks         │    │
 │  │  • Format validation       │    │
 │  └────────────────────────────┘    │
-│                                     │
+│                                    │
 │  ┌────────────────────────────┐    │
 │  │      Interpreter           │    │
 │  │  • Executes bytecode       │    │
 │  │  • Line-by-line execution  │    │
 │  │  • Generates machine code  │    │
 │  └────────────────────────────┘    │
-│                                     │
+│                                    │
 │  ┌────────────────────────────┐    │
 │  │    JIT Compiler            │    │
 │  │  • Optimizes hot code      │    │
 │  │  • Compiles to native      │    │
 │  └────────────────────────────┘    │
-│                                     │
+│                                    │
 │  ┌────────────────────────────┐    │
 │  │   Garbage Collector        │    │
 │  │  • Automatic memory mgmt   │    │
 │  │  • Frees unused objects    │    │
 │  └────────────────────────────┘    │
-└─────────────────────────────────────┘
+└────────────────────────────────────┘
 ```
 
 ### Component Details
@@ -530,19 +530,19 @@ CPU executes
 Same MyApp.class runs on:
 
 Windows:                    Linux:                      macOS:
-┌──────────┐               ┌──────────┐                ┌──────────┐
-│MyApp.class│              │MyApp.class│               │MyApp.class│
-└─────┬────┘               └─────┬────┘                └─────┬────┘
-      │                          │                            │
-┌─────▼────┐               ┌─────▼────┐                ┌─────▼────┐
-│Windows JVM│              │Linux JVM │                │ macOS JVM│
-└─────┬────┘               └─────┬────┘                └─────┬────┘
-      │                          │                            │
-┌─────▼────┐               ┌─────▼────┐                ┌─────▼────┐
-│Windows   │               │Linux     │                │ macOS    │
-│Machine   │               │Machine   │                │Machine   │
-│Code      │               │Code      │                │Code      │
-└──────────┘               └──────────┘                └──────────┘
+┌──────────┐               ┌───────────┐                ┌───────────┐
+│MyApp.class│              │MyApp.class│                │MyApp.class│
+└─────┬────┘               └─────┬─────┘                └──────┬────┘
+      │                          │                             │
+┌─────▼────┐               ┌─────▼─────┐                ┌──────▼────┐
+│Windows JVM│              │Linux JVM  │                │ macOS JVM │
+└─────┬────┘               └──────┬────┘                └──────┬────┘
+      │                           │                            │
+┌─────▼────┐               ┌──────▼────┐                ┌──────▼────┐
+│Windows   │               │  Linux    │                │  macOS    │
+│Machine   │               │  Machine  │                │  Machine  │
+│Code      │               │  Code     │                │  Code     │
+└──────────┘               └───────────┘                └───────────┘
 ```
 
 ---

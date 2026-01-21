@@ -341,11 +341,11 @@ public static void main()              // No String array
 Every API or keyword that defines a type generates a `.class` file:
 
 ```
-✅ Classes       → .class file
-✅ Interfaces    → .class file
-✅ Enums         → .class file
-✅ Abstract classes → .class file
-✅ Even empty classes → .class file
+✅ Classes              → .class file
+✅ Interfaces           → .class file
+✅ Enums                → .class file
+✅ Abstract classes     → .class file
+✅ Even empty classes   → .class file
 ```
 
 ### Examples
